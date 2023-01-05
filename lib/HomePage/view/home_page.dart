@@ -4,7 +4,7 @@ import 'button_pressed_screen.dart';
 import 'orginal_language.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +56,40 @@ class HomePage extends StatelessWidget {
                     ')',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w800),
-                  ),
+                  )
                 ],
               ),
               SizedBox(
                 height: 5.h,
               ),
               OriginalLanguageScreen(),
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
+                children: const [
+                  Text(
+                    'Translate From ',
+                    style: TextStyle(
+                        color: Colors.white54, fontWeight: FontWeight.w400),
+                  ),
+                  Text(
+                    '(',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w800),
+                  ),
+                  Text(
+                    'Slovenija',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    ')',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w800),
+                  )
+                ],
+              ),
             ],
           ),
         ),

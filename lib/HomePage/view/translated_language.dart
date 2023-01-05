@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class OriginalLanguageScreen extends StatelessWidget {
-  const OriginalLanguageScreen({
+class TranslatedLanguageScreen extends StatelessWidget {
+  const TranslatedLanguageScreen({
     Key? key,
   }) : super(key: key);
 
@@ -26,7 +26,7 @@ class OriginalLanguageScreen extends StatelessWidget {
             maxLines: null,
             decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
-                hintText: 'Enter Text',
+                hintText: 'ranslation',
                 hintStyle: TextStyle(color: Colors.white)),
           ),
         ),
