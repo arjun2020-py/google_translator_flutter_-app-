@@ -26,7 +26,7 @@ class TranslatedLanguageScreen extends StatelessWidget {
             maxLines: null,
             decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
-                hintText: 'ranslation',
+                hintText: 'Translation',
                 hintStyle: TextStyle(color: Colors.white)),
           ),
         ),

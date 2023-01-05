@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'language_list.dart';
+
 class ButtonPressedScreen extends StatelessWidget {
   const ButtonPressedScreen({
     Key? key,
@@ -14,14 +16,26 @@ class ButtonPressedScreen extends StatelessWidget {
           width: 130.w,
           height: 40.h,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.r),
+                        topRight: Radius.circular(20.r))),
+                builder: (context) {
+                  return LanguageListScreen();
+                },
+              );
+            },
             child: const Text('Germany'),
             style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 62, 68, 74),
+                primary: const Color.fromARGB(255, 62, 68, 74),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
-                    width: 3.w, color: Color.fromARGB(255, 62, 68, 74))),
+                    width: 3.w, color: const Color.fromARGB(255, 62, 68, 74))),
           ),
         ),
         IconButton(
@@ -37,14 +51,15 @@ class ButtonPressedScreen extends StatelessWidget {
             onPressed: () {},
             child: const Text('Slovenija'),
             style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 62, 68, 74),
+                primary: const Color.fromARGB(255, 62, 68, 74),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
-                    width: 3.w, color: Color.fromARGB(255, 62, 68, 74))),
+                    width: 3.w, color: const Color.fromARGB(255, 62, 68, 74))),
           ),
         ),
       ],
     );
   }
 }
+

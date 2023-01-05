@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class LanguageListScreen extends StatelessWidget {
+  const LanguageListScreen({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 62, 68, 74),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.r), topRight: Radius.circular(20.r))),
+      height: 500.h,
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(right: 250.r, top: 20.r),
+            child: const Text(
+              'From',
+              style:
+                  TextStyle(color: Colors.white54, fontWeight: FontWeight.w500),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                      borderSide: const BorderSide(color: Colors.white)),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                      borderSide: const BorderSide(color: Colors.white)),
+                  prefixIcon: const Icon(
+                    Icons.search_rounded,
+                    color: Colors.white,
+                  ),
+                  filled: true,
+                  fillColor: const Color.fromARGB(255, 62, 68, 74),
+                  hintText: 'Search....',
+                  hintStyle: TextStyle(color: Colors.white)),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
