@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                TranslatedLanguageScreen() //3
+                TranslatedLanguageScreen(), //3
               ],
             ),
           ),

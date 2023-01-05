@@ -17,12 +17,17 @@ class LanguageListScreen extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(right: 250.r, top: 20.r),
-            child: const Text(
+            padding: EdgeInsets.only(right: 280.r, top: 20.r),
+            child: Text(
               'From',
-              style:
-                  TextStyle(color: Colors.white54, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  color: Colors.white54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16.sp),
             ),
+          ),
+          SizedBox(
+            height: 10.h,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -42,6 +47,19 @@ class LanguageListScreen extends StatelessWidget {
                   fillColor: const Color.fromARGB(255, 62, 68, 74),
                   hintText: 'Search....',
                   hintStyle: TextStyle(color: Colors.white)),
+            ),
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 240.r),
+            child: Text(
+              'All Languages',
+              style: TextStyle(
+                  color: Colors.white54,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16.sp),
             ),
           )
         ],

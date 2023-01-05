@@ -25,17 +25,17 @@ class ButtonPressedScreen extends StatelessWidget {
                         topLeft: Radius.circular(20.r),
                         topRight: Radius.circular(20.r))),
                 builder: (context) {
-                  return LanguageListScreen();
+                  return const LanguageListScreen(); //4
                 },
               );
             },
-            child: const Text('Germany'),
             style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 62, 68, 74),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
                     width: 3.w, color: const Color.fromARGB(255, 62, 68, 74))),
+            child: const Text('Germany'),
           ),
         ),
         IconButton(
@@ -49,17 +49,16 @@ class ButtonPressedScreen extends StatelessWidget {
           height: 40.h,
           child: ElevatedButton(
             onPressed: () {},
-            child: const Text('Slovenija'),
             style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 62, 68, 74),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
                     width: 3.w, color: const Color.fromARGB(255, 62, 68, 74))),
+            child: const Text('Slovenija'),
           ),
         ),
       ],
     );
   }
 }
-
