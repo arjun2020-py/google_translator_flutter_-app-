@@ -21,15 +21,14 @@ class ButtonPressedScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
-                    width: 3.w,
-                    color: Color.fromARGB(255, 62, 68, 74))),
+                    width: 3.w, color: Color.fromARGB(255, 62, 68, 74))),
           ),
         ),
         IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.swap_horiz_outlined,
-              color: Color(0xfffffffff),
+              color: Color(0xff5a5b5c),
             )),
         SizedBox(
           width: 130.w,
@@ -42,8 +41,7 @@ class ButtonPressedScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r)),
                 side: BorderSide(
-                    width: 3.w,
-                    color: Color.fromARGB(255, 62, 68, 74))),
+                    width: 3.w, color: Color.fromARGB(255, 62, 68, 74))),
           ),
         ),
       ],
