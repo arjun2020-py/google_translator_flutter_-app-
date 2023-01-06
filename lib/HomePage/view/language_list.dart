@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_translator/HomePage/view/country_card_list.dart';
 
 class LanguageListScreen extends StatelessWidget {
   const LanguageListScreen({
@@ -61,7 +62,8 @@ class LanguageListScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   fontSize: 16.sp),
             ),
-          )
+          ),
+          Expanded(child: CountryLanguageList())
         ],
       ),
     );

@@ -36,7 +36,9 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
+
                 const ButtonPressedScreen(), //1
+                
                 SizedBox(
                   height: 15.h,
                 ),
@@ -67,7 +69,9 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 5.h,
                 ),
-                OriginalLanguageScreen(), //2
+
+                const OriginalLanguageScreen(), //2
+
                 SizedBox(
                   height: 10.h,
                 ),
@@ -98,7 +102,7 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                TranslatedLanguageScreen(), //3
+                const TranslatedLanguageScreen(), //3
               ],
             ),
           ),
