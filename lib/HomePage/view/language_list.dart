@@ -54,7 +54,7 @@ class LanguageListScreen extends StatelessWidget {
             height: 10.h,
           ),
           Padding(
-            padding: EdgeInsets.only(right: 240.r),
+            padding: EdgeInsets.only(right: 230.r),
             child: Text(
               'All Languages',
               style: TextStyle(
@@ -63,7 +63,10 @@ class LanguageListScreen extends StatelessWidget {
                   fontSize: 16.sp),
             ),
           ),
-          Expanded(child: CountryLanguageList())
+          SizedBox(
+            height: 10.h,
+          ),
+          Expanded(child: CountryLanguageList()) //5
         ],
       ),
     );
