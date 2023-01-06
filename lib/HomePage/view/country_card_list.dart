@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_translator/ApiServices/api_services.dart';
 import 'package:google_translator/models/language_model.dart';
 
+import 'button_pressed_screen.dart';
+
 class CountryLanguageList extends StatelessWidget {
   CountryLanguageList({super.key});
 
@@ -30,7 +32,7 @@ class CountryLanguageList extends StatelessWidget {
                         color: const Color(0xff121416),
                         child: ListTile(
                           title: Text(
-                            languageData[index].data.toString(),
+                            '${languageData[index].data}',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),

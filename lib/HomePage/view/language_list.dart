@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_translator/HomePage/view/country_card_list.dart';
+import 'package:google_translator/HomePage/view/search.dart';
 
 class LanguageListScreen extends StatelessWidget {
   LanguageListScreen({Key? key, required this.buttonType}) : super(key: key);
+
+  //create a bool varible for condation check
   bool buttonType;
   @override
   Widget build(BuildContext context) {
@@ -30,22 +33,32 @@ class LanguageListScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.r)),
-                      borderSide: const BorderSide(color: Colors.white)),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.r)),
-                      borderSide: const BorderSide(color: Colors.white)),
-                  prefixIcon: const Icon(
-                    Icons.search_rounded,
-                    color: Colors.white,
-                  ),
-                  filled: true,
-                  fillColor: const Color.fromARGB(255, 62, 68, 74),
-                  hintText: 'Search....',
-                  hintStyle: TextStyle(color: Colors.white)),
+            child: SizedBox(
+              height: 50.h,
+              child: TextFormField(
+                decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                        borderSide: const BorderSide(color: Colors.white)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                        borderSide: const BorderSide(color: Colors.white)),
+                    prefix: IconButton(
+                      onPressed: () {
+                        showSearch(
+                            context: context, delegate: SearchLanguage());
+                      },
+                      icon: Icon(
+                        Icons.search,
+                        size: 20.sp,
+                        color: Colors.white,
+                      ),
+                    ),
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 62, 68, 74),
+                    hintText: 'Search....',
+                    hintStyle: TextStyle(color: Colors.white)),
+              ),
             ),
           ),
           SizedBox(
