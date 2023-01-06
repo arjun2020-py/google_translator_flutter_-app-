@@ -3,10 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_translator/HomePage/view/country_card_list.dart';
 
 class LanguageListScreen extends StatelessWidget {
-  const LanguageListScreen({
-    Key? key,
-  }) : super(key: key);
-
+  LanguageListScreen({Key? key, required this.buttonType}) : super(key: key);
+  bool buttonType;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +18,7 @@ class LanguageListScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: 280.r, top: 20.r),
             child: Text(
-              'From',
+              buttonType == true ? 'From' : 'To',
               style: TextStyle(
                   color: Colors.white54,
                   fontWeight: FontWeight.w500,

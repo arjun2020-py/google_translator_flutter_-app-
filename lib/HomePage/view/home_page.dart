@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'button_pressed_screen.dart';
+import 'language_list.dart';
 import 'orginal_language.dart';
 import 'translated_language.dart';
 
@@ -37,8 +38,7 @@ class HomePage extends StatelessWidget {
                   height: 10.h,
                 ),
 
-                const ButtonPressedScreen(), //1
-                
+                ButtonPressedScreen(),
                 SizedBox(
                   height: 15.h,
                 ),

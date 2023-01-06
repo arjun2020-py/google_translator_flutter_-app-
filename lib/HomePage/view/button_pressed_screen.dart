@@ -25,8 +25,9 @@ class ButtonPressedScreen extends StatelessWidget {
                         topLeft: Radius.circular(20.r),
                         topRight: Radius.circular(20.r))),
                 builder: (context) {
-                  
-                  return const LanguageListScreen(); //4
+                  return LanguageListScreen(
+                    buttonType: true,
+                  ); //4
                 },
               );
             },
@@ -49,7 +50,21 @@ class ButtonPressedScreen extends StatelessWidget {
           width: 130.w,
           height: 40.h,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.r),
+                        topRight: Radius.circular(20.r))),
+                builder: (context) {
+                  return LanguageListScreen(
+                    buttonType: false,
+                  ); //4
+                },
+              );
+            },
             style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 62, 68, 74),
                 shape: RoundedRectangleBorder(
