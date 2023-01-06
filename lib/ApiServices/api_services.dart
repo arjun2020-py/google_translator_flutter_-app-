@@ -8,7 +8,8 @@ class TranslatorApi {
   //api get method for languages endpoint
 
   Future<List<LanguageApi>> fetchLanugaes() async {
-    Uri url = Uri.parse('https://fakestoreapi.com/products');
+    Uri url = Uri.parse(
+        'https://google-translate1.p.rapidapi.com/language/translate/v2/languages');
 
     final response = await http.get(url); //'get' read data from api.
 
